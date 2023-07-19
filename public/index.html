@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/output.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      ion-icon {
+        font-size: 24pt;
+      }
+    </style>
+  </head>
+  <body class="styleBody">
+    <header class="styleHeader">
+      <div class="flex flex-row">
+        <button id="menuBut">
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+        <!-- <img class="w-11 h-10" src="./assets/img/icon.png" alt="icon prog"> -->
+      </div>
+      <div>
+        <ion-icon class="block dark:hidden text-black dark:text-white" name="sunny-outline" id="light"></ion-icon>
+        <ion-icon class="hidden dark:block text-black dark:text-white" name="moon-outline" id="dark"></ion-icon>
+      </div>
+    </header>
+
+    <div class="fixed top-0 left-0 m-0 p-0 z-40 w-full h-screen -translate-x-full bg-white/30 dark:bg-black/30" id="menuBack">
+      <div class="w-64 p-4 bg-white dark:bg-zinc-900 h-screen transition-transform -translate-x-full">
+        <span class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400">Menu</span>
+        <div class="flex flex-col py-4 overflow-y-auto h-full space-y-2 font-medium">
+          <a href="#/" class="styleLinkMenu"><ion-icon name="home-outline"></ion-icon><span>Home</span></a>
+          <a href="#/count_words" class="styleLinkMenu"><ion-icon name="reader-outline"></ion-icon> <span>Count words</span></a>
+          <a href="#/virustotal" class="styleLinkMenu"><ion-icon name="bug-outline"></ion-icon> <span>VirusTotal</span></a>
+          <a href="#/url_enc_dec" class="styleLinkMenu"><ion-icon name="code-working-outline"></ion-icon> <span>URL Encode/Decode</span></a>
+          <a href="#/base64_enc_dec" class="styleLinkMenu"><ion-icon name="code-working-outline"></ion-icon> <span>Base64 Encode/Decode</span></a>
+          <a href="#/convert_doc_txt" class="styleLinkMenu"><ion-icon name="documents-outline"></ion-icon> <span>Converter DOC to TXT</span></a>
+          <a href="#/convert_txt_doc" class="styleLinkMenu"><ion-icon name="documents-outline"></ion-icon> <span>Converter TXT to DOC</span></a>
+          <a href="#/data_to_chart" class="styleLinkMenu"><ion-icon name="bar-chart-outline"></ion-icon> <span>Visualization data on chart</span></a>
+          <a href="#/text-to-speech" class="styleLinkMenu"><ion-icon name="volume-high-outline"></ion-icon> <span>Text-to-speech</span></a>
+          <a href="#/file_downloader" class="styleLinkMenu"><ion-icon name="cloud-download-outline"></ion-icon> <span>Files downloader</span></a>
+          <a href="#/color_palette" class="styleLinkMenu"><ion-icon name="color-filter-outline"></ion-icon> <span>Color Palette</span></a>
+          <a href="#/xls_to_json" class="styleLinkMenu"><ion-icon name="code-slash-outline"></ion-icon> <span>XLS to JSON</span></a>
+          <a href="#/csv_to_table" class="styleLinkMenu"><ion-icon name="code-slash-outline"></ion-icon> <span>CSV to Table data</span></a>
+          <a href="#/json_to_table" class="styleLinkMenu"><ion-icon name="code-slash-outline"></ion-icon> <span>JSON to Table data</span></a>
+          <a href="#/xml_to_json" class="styleLinkMenu"><ion-icon name="code-slash-outline"></ion-icon> <span>XML to JSON </span></a>
+          <a href="#/json_to_xml" class="styleLinkMenu"><ion-icon name="code-slash-outline"></ion-icon> <span>JSON to XML</span></a>
+          <a href="#/weather" class="styleLinkMenu"><ion-icon name="cloud-outline"></ion-icon> <span>Weather</span></a>
+        </div>
+      </div>
+    </div>
+
+    <main id="content" class="flex flex-col m-2 mt-14"></main>
+
+    <footer class="styleBorderSolid border-t-2 mt-4">
+      <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+        <span>&copy;DmitriyDev 2023-<script>document.write(new Date().getFullYear())</script></span>
+      </div>
+    </footer>
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/router.js"></script>
+    <script>
+      const router = new Router();
+      router.addRoute('/', 'home/index.html');
+      router.addRoute('/count_words', 'count_words/index.html');
+      router.addRoute('/virustotal', 'virustotal/index.html');
+      router.addRoute('/url_enc_dec', 'url_enc_dec/index.html');
+      router.addRoute('/base64_enc_dec', 'base64_enc_dec/index.html');
+      router.addRoute('/convert_doc_txt', 'convert_doc_txt/index.html');
+      router.addRoute('/convert_txt_doc', 'convert_txt_doc/index.html');
+      router.addRoute('/data_to_chart', 'data_to_chart/index.html');
+      router.addRoute('/text-to-speech', 'text-to-speech/index.html');
+      router.addRoute('/file_downloader', 'file_downloader/index.html');
+      router.addRoute('/color_palette', 'color_palette/index.html');
+      router.addRoute('/xls_to_json', 'xls_to_json/index.html');
+      router.addRoute('/csv_to_table', 'csv_to_table/index.html');
+      router.addRoute('/json_to_table', 'json_to_table/index.html');
+      router.addRoute('/xml_to_json', 'xml_to_json/index.html');
+      router.addRoute('/json_to_xml', 'json_to_xml/index.html');
+      router.addRoute('/weather', 'weather/index.html');
+      router.init('content');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<head>
+  <title>Color Palette</title>
+</head>
+
+<div class="flex flex-col gap-y-3">
+  <span class="text-2xl font-bold border-b-2 styleBorderSolid">Color Palette</span>
+
+  <span class="styleLabel">Choose a color type</span>
+  <div class="flex flex-row gap-x-5">
+    <div class="flex flex-row gap-x-2 justify-center content-center">
+      <input class="styleRadio" type="radio" name="typecol" id="rgb">
+      <label class="styleLabel !mt-0" for="rgb">RGB</label>
+    </div>
+
+    <div class="flex flex-row gap-x-2 justify-center content-center">
+      <input class="styleRadio" type="radio" name="typecol" id="hex">
+      <label class="styleLabel !mt-0" for="hex">HEX</label>
+    </div>
+
+    <!-- <div class="flex flex-row gap-x-2">
+      <label class="styleLabel" for="hsv">HSV</label><input class="styleRadio" type="radio" name="typecol" id="hsv"> -->
+    </div>
+  </div>
+
+  <label class="styleLabel" for="field">Enter the color according to the selected type</label>
+  <input type="text" id="field" class="styleField">
+
+  <div id="blockCol" class="flex flex-col gap-y-3 mt-5">
+    <input type="color" id="colOut" class="w-40 h-40">
+
+    <div class="flex flex-row gap-x-3">
+      <span>RGB</span>
+      <span id="resRGB">rgb(0, 0, 0)</span>
+    </div>
+    <div class="flex flex-row gap-x-2">
+      <span>HEX</span>
+      <span id="resHEX">#000000</span>
+    </div>
+    <div class="flex flex-row gap-x-2">
+      <span>HSV</span>
+      <span id="resHSV">hsv(0°, 0%, -5%)</span>
+    </div>
+  </div>
+</div>

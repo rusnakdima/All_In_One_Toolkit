@@ -1,0 +1,50 @@
+{
+  "name": "all-in-one-toolkit",
+  "version": "0.0.1",
+  "description": "Application on electron.",
+  "keywords": [],
+  "author": "Dmitriy303",
+  "license": "ISC",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "tailwind": "pnpx tailwindcss -i ./public/assets/css/input.css -o ./public/assets/css/output.css --watch",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "test.dmitriydev.electron-app",
+    "productName": "Electron App",
+    "copyright": "Copyright ©2023 Dmitriy303",
+    "win": {
+      "icon": "./public/assets/img/icon.png",
+      "target": "nsis"
+    },
+    "files": [
+      "./build/**/*",
+      "./dist/**/*",
+      "./node_modules/**/*",
+      "./public/**/*",
+      "*.js"
+    ],
+    "directories": {
+      "output": "dist",
+      "buildResources": "public"
+    }
+  },
+  "devDependencies": {
+    "electron": "^24.1.3",
+    "electron-builder": "^23.6.0",
+    "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "chart.js": "^4.3.0",
+    "csv-parser": "^3.0.0",
+    "docx": "^8.2.0",
+    "flowbite": "^1.6.5",
+    "fs": "0.0.1-security",
+    "jszip": "^3.10.1",
+    "socket.io": "^4.6.1",
+    "xlsx": "^0.18.5"
+  }
+}

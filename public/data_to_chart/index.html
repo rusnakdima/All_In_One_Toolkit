@@ -1,0 +1,77 @@
+<head>
+  <title>Visualization data on chart</title>
+</head>
+
+<div class="flex flex-col">
+  <span class="text-2xl font-bold border-b-2 styleBorderSolid">Visualization data on chart</span>
+
+  <details class="styleDetails">
+    <summary>
+      <span class="text-xl font-bold">Select a tabular document with data</span>
+    </summary>
+
+    <div class="flex flex-col gap-y-3">
+      <input class="styleFileInput" type="file" id="file" accept=".xls, .xlsx, .xlsm">
+      <button class="styleBut w-max" id="createTableFile">Create a table based on data from a file</button>
+    </div>
+  </details>
+
+  <details class="styleDetails">
+    <summary>
+      <span class="text-xl font-bold">Insert data from a table (copy a table from any source)</span>
+    </summary>
+
+    <div class="flex flex-col gap-y-3">
+      <textarea class="styleTextarea" name="field" id="dataField" rows="7"></textarea>
+      <button class="styleBut w-max" id="createTableField">Create a table based on data from the field</button>
+    </div>
+  </details>
+
+  <details class="styleDetails">
+    <summary>
+      <span class="text-xl font-bold">Enter all the data manually</span>
+    </summary>
+
+    <div class="flex flex-col gap-y-3">
+      <label class="styleLabel" for="columns">Number of columns:</label>
+      <input class="styleField" type="number" id="columns" name="columns">
+
+      <label class="styleLabel" for="rows">Number of rows:</label>
+      <input class="styleField" type="number" id="rows" name="rows">
+      
+      <button class="styleBut w-max" id="createTableManual">Create a table based on data from the field</button>
+    </div>
+  </details>
+
+  <div class="flex flex-col gap-y-2" id="blockTable" style="display: none;">
+    <span class="text-2xl font-bold">Table data</span>
+    <table id="dataTable" class="border styleBorderSolid"></table>
+  </div>
+
+  <div class="flex flex-col gap-y-3" id="blockChart" style="display: none;">
+    <label class="styleLabel" for="chartType">Select the chart type:</label>
+    <select class="styleSelect" id="chartType">
+      <option value="bar">Bar chart</option>
+      <option value="line">Line chart</option>
+      <option value="pie">Pie chart</option>
+      <option value="doughnut">Donat chart</option>
+    </select>
+
+    <button class="styleBut w-max" id="createChart">Create a diagram</button>
+
+    <div id="outChart" class="bg-white text-black"></div>
+  </div>
+</div>
+
+<div id="windNotify" class="styleWindNotify" style="display: none;">
+  <div class="flex flex-row p-3">
+    <div class="flex flex-col">
+      <span class="text-4xl">Notification</span>
+      <span id="notText"></span>
+    </div>
+    <button id="closeNotify">
+      <ion-icon name="close-circle-outline"></ion-icon>
+    </button>
+  </div>
+  <div class="flex flex-col mb-1 bg-white w-full h-1" id="timeNotify"></div>
+</div>

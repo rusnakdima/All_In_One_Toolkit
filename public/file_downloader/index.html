@@ -1,0 +1,17 @@
+<head>
+  <title>Files downloader</title>
+</head>
+
+<div class="flex flex-col gap-y-3">
+  <span class="text-2xl font-bold border-b-2 styleBorderSolid">Files downloader</span>
+
+  <label class="styleLabel" for="links">Enter the links to the files you want to download (separating the links between each other via Enter)</label>
+  <textarea class="styleTextarea" name="field" id="links" rows="7"></textarea>
+  
+  <label class="styleLabel" for="path">Select the path where you want to save the files</label>
+  <input class="styleFileInput" type="file" id="path" webkitdirectory directory>
+
+  <a class="styleBut w-max" id="downloadBut">Download</a>
+
+  <div id="outLog" class="border-t styleBorderSolid flex flex-col"></div>
+</div>

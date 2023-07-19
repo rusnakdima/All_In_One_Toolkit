@@ -1,0 +1,39 @@
+<head>
+  <title>Text-to-speech</title>
+</head>
+
+<div class="flex flex-col">
+  <span class="text-2xl font-bold border-b-2 styleBorderSolid">Text-to-speech</span>
+
+  <details class="styleDetails">
+    <summary>
+      <span class="text-xl font-bold">Select a Microsoft Word document (DOC/DOCX)</span>
+    </summary>
+
+    <div class="flex flex-col gap-y-3">
+      <input class="styleFileInput" type="file" id="fileDOC" accept=".doc, .docx">
+    </div>
+  </details>
+
+  <details class="styleDetails">
+    <summary>
+      <span class="text-xl font-bold">Select the text file</span>
+    </summary>
+
+    <div class="flex flex-col gap-y-3">
+      <input class="styleFileInput" type="file" id="fileTXT" accept=".txt">
+    </div>
+  </details>
+
+  <details class="styleDetails">
+    <summary>
+      <span class="text-xl font-bold">Paste the text into the field below</span>
+    </summary>
+
+    <div class="flex flex-col gap-y-3">
+      <textarea class="styleTextarea" name="field" id="textField" rows="7"></textarea>
+    </div>
+  </details>
+
+  <button class="styleBut w-min" id="speech">Voice text</button>
+</div>

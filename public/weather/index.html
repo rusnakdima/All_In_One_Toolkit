@@ -1,0 +1,52 @@
+<head>
+  <title>Weather</title>
+</head>
+
+<div class='text-xl m-5'>
+  <div class='absolute m-0 left-0 top-0 w-full h-full bg-black/50' id="showChooseCity">
+    <div class='absolute m-auto left-1/4 top-2 flex flex-col border-2 border-solid border-white bg-gray-600 text-white z-10 p-5 gap-y-2'>
+      <span id='closeShowChooseCity'>
+        <ion-icon name="close-circle"></ion-icon>
+      </span>
+      <div class="flex flex-col justify-center text-center">
+        <span>Выберите город</span>
+        <input type="text" name="" id='cityInput' class='border-2 border-solid border-white px-2 bg-gray-600 text-white' />
+      </div>
+      <button class="border border-solid border-white bg-green-500 text-white w-min px-5 py-1" id='setCountry'>Submit</button>
+    </div>
+  </div>
+  <div class='w-full md:w-3/4 text-xl py-10 rounded-2xl flex flex-col justify-center text-center bg-slate-800 text-white'>
+    <div class='flex flex-col'>
+      <div class='flex flex-row justify-center'>
+        <span class='text-2xl font-bold' id="weatherContry"></span>
+        <button id='openShowChooseCity'>
+          <ion-icon name="create"></ion-icon>
+        </button>
+      </div>
+      <span class='text-xl' id="dateWeather">-1</span>
+    </div>
+    <div class='flex flex-row text-center items-center justify-center'>
+      <img src="" alt="Icon weather" id="icon" style="width: 100px" />
+      <span class='text-3xl' id="temp">-1</span>
+    </div>
+    <span>Ощущается как <span id="feelslike">-1</span></span>
+    <div class='flex flex-row w-full my-5'>
+      <div class='flex flex-col w-1/2'>
+        <span>Скорость ветра</span>
+        <span id="wind_kph">-1 км/ч</span>
+      </div>
+      <div class='flex flex-col w-1/2'>
+        <span>Осадки</span>
+        <span id="precip_mm">-1 мм</span>
+      </div>
+    </div>
+    <div class='flex flex-col my-5 mx-5'>
+      <span class='font-bold text-2xl pb-2'>Сегодня</span>
+      <div class='flex flex-row overflow-x-auto h-auto' id="curDayHours"></div>
+    </div>
+    <div class='flex flex-col my-5 mx-5'>
+      <span class='font-bold text-2xl pb-2'>Погода на неделю</span>
+      <div class='flex flex-col w-full gap-y-2' id="weekWeather"></div>
+    </div>
+  </div>
+</div>

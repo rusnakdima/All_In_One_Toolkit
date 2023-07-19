@@ -1,0 +1,23 @@
+<head>
+  <title>Count words</title>
+</head>
+
+<div class="flex flex-col gap-y-3">
+  <span class="text-2xl font-bold border-b-2 styleBorderSolid">Counting the number of words in the text</span>
+  
+  <span class="text-xl font-bold">Choose a file</span>
+
+  <div class="flex flex-col">
+    <input class="styleFileInput" id="file" type="file" accept=".txt">
+  </div>
+  
+  <span class="my-3 text-xl font-bold">Or enter/paste text in the field below</span>
+  
+  <div class="flex flex-row">
+    <textarea id="field" rows="6" class="styleTextarea"></textarea>
+  </div>
+  
+  <button class="styleBut w-min" id="calc">Calculate</button>
+  
+  <output id="outputRes" class="border styleBorderSolid p-3 rounded-lg" style="display: none"></output>
+</div>
