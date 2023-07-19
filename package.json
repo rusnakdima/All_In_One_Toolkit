@@ -1,6 +1,6 @@
 {
   "name": "all-in-one-toolkit",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Application on electron.",
   "keywords": [],
   "author": "Dmitriy303",
@@ -13,7 +13,7 @@
     "build": "electron-builder"
   },
   "build": {
-    "appId": "test.dmitriydev.electron-app",
+    "appId": "com.dmitriydev.allinonetoolkit",
     "productName": "Electron App",
     "copyright": "Copyright ©2023 Dmitriy303",
     "win": {
