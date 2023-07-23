@@ -14,11 +14,14 @@
   },
   "build": {
     "appId": "com.dmitriydev.allinonetoolkit",
-    "productName": "Electron App",
+    "productName": "all-in-one-toolkit",
     "copyright": "Copyright ©2023 Dmitriy303",
     "win": {
       "icon": "./public/assets/img/icon.png",
-      "target": "nsis"
+      "target": ["portable"]
+    },
+    "portable": {
+      "artifactName": "AllInOneToolkit_portable.exe"
     },
     "files": [
       "./build/**/*",
