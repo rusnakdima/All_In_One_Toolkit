@@ -36,7 +36,7 @@ class CSVtoTableClass{
   }
 
   createTableFun(){
-    if(file != null){
+    if(this.file != null){
       let results = [];
       fs.createReadStream(this.file.path)
         .pipe(csv())
